@@ -1,0 +1,53 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px; /* 控制顶部的空间，也可以根据实际情况调整 */
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* 确保内容在小屏幕上也能正确显示 */
+    max-width: 600px; /* 防止在大屏幕上过宽 */
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* 允许元素在必要时换行 */
+}
+
+#restaurantInput, button {
+    margin: 5px;
+    height: 40px; /* 统一输入框和按钮的高度 */
+    padding: 0 10px;
+}
+
+.delete-button {
+    cursor: pointer;
+    padding: 0 5px;
+    border: none;
+    background-color: transparent;
+    color: red;
+    font-size: 20px;
+}
+
+@media (max-width: 600px) {
+    .content {
+        padding: 10px;
+    }
+
+    .input-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #restaurantInput, button {
+        width: 100%; /* 在小屏幕设备上，输入框和按钮宽度占满容器 */
+    }
+}
