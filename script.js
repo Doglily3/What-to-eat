@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (restaurants.length > 0) {
             const index = Math.floor(Math.random() * restaurants.length);
             const chosenOne = restaurants[index];
-            document.getElementById('chosenRestaurant').textContent = `Final decision:${chosenOne}`;
+            document.getElementById('chosenRestaurant').textContent = `Final decision: ${chosenOne}`;
         } else {
             alert('请先添加至少一个餐厅！');
         }
