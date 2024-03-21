@@ -1,53 +1,85 @@
-body, html {
-    height: 100%;
+/* 基本重置 */
+html, body {
     margin: 0;
-    display: flex;
-    justify-content: center;
-    padding-top: 20px; /* 控制顶部的空间，也可以根据实际情况调整 */
+    padding: 0;
+    width: 100%;
+    height: 100%;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* 内容向顶部对齐 */
+    padding-top: 20px; /* 从顶部开始留出一些空间 */
+}
+
+/* 主内容区域样式 */
 .content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%; /* 确保内容在小屏幕上也能正确显示 */
-    max-width: 600px; /* 防止在大屏幕上过宽 */
+    width: 90%; /* 占屏幕宽度的大部分，确保在手机上也能很好地显示 */
+    max-width: 600px; /* 限制最大宽度，避免在大屏幕上过宽 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 轻微的阴影效果 */
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff; /* 背景色 */
 }
 
+/* 输入区域样式 */
 .input-group {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
     margin-bottom: 20px;
-    flex-wrap: wrap; /* 允许元素在必要时换行 */
 }
 
-#restaurantInput, button {
-    margin: 5px;
-    height: 40px; /* 统一输入框和按钮的高度 */
-    padding: 0 10px;
+#restaurantInput {
+    flex: 1; /* 输入框占据剩余空间 */
+    margin-right: 10px; /* 与按钮间隔 */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px; /* 轻微的边框圆角 */
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* 餐厅列表和删除按钮样式 */
+#restaurantList div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
 }
 
 .delete-button {
     cursor: pointer;
-    padding: 0 5px;
-    border: none;
     background-color: transparent;
-    color: red;
-    font-size: 20px;
+    border: none;
+    color: #ff0000;
+    font-size: 24px;
 }
 
+/* 响应式设计 */
 @media (max-width: 600px) {
-    .content {
-        padding: 10px;
-    }
-
     .input-group {
         flex-direction: column;
-        align-items: stretch;
     }
 
     #restaurantInput, button {
-        width: 100%; /* 在小屏幕设备上，输入框和按钮宽度占满容器 */
+        width: 100%; /* 小屏幕上输入框和按钮占满整行 */
+        margin: 5px 0; /* 调整间距 */
     }
 }
