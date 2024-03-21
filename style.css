@@ -26,6 +26,7 @@ body, html {
     margin: 5px;
     height: 40px;
     padding: 0 10px;
+    font-size: 16px; /* 初始字体大小 */
 }
 
 .restaurant-item {
@@ -36,7 +37,7 @@ body, html {
 }
 
 .restaurant-name, .delete-button {
-    white-space: nowrap; /* 防止名称换行 */
+    white-space: nowrap;
 }
 
 .delete-button {
@@ -45,7 +46,7 @@ body, html {
     border: none;
     background-color: transparent;
     color: red;
-    font-size: 20px;
+    font-size: 20px; /* 初始删除按钮的字体大小 */
 }
 
 @media (max-width: 600px) {
@@ -62,11 +63,11 @@ body, html {
         width: 100%;
     }
 
-    .restaurant-item {
-        flex-wrap: wrap; /* 允许项目在必要时换行，但优先尝试保持在一行 */
+    .restaurant-item, .restaurant-name, .delete-button {
+        font-size: 14px; /* 在小屏幕上调整字体大小 */
     }
 
-    .restaurant-name {
-        flex-grow: 1; /* 确保名称可以伸缩以填满可用空间，推动删除按钮向右 */
+    .delete-button {
+        font-size: 18px; /* 在小屏幕上调整删除按钮的字体大小 */
     }
 }
