@@ -28,6 +28,18 @@ body, html {
     padding: 0 10px;
 }
 
+.restaurant-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.restaurant-name {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
 .delete-button {
     cursor: pointer;
     padding: 0 5px;
