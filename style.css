@@ -35,9 +35,8 @@ body, html {
     width: 100%;
 }
 
-.restaurant-name {
-    flex-grow: 1;
-    margin-right: 10px;
+.restaurant-name, .delete-button {
+    white-space: nowrap; /* 防止名称换行 */
 }
 
 .delete-button {
@@ -61,5 +60,13 @@ body, html {
 
     #restaurantInput, button {
         width: 100%;
+    }
+
+    .restaurant-item {
+        flex-wrap: wrap; /* 允许项目在必要时换行，但优先尝试保持在一行 */
+    }
+
+    .restaurant-name {
+        flex-grow: 1; /* 确保名称可以伸缩以填满可用空间，推动删除按钮向右 */
     }
 }
