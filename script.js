@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const chosenOne = restaurants[index];
             document.getElementById('chosenRestaurant').textContent = `Final decision: ${chosenOne}`;
         } else {
-            alert('请先添加至少一个餐厅！');
+            alert('Plz enter at least one option！');
         }
     };
 
